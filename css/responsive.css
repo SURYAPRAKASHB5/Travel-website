@@ -347,6 +347,11 @@ html, body {
         height: auto;
     }
 
+    /* Hide utility bar on mobile - keep main header visible */
+    .utility-bar {
+        display: none;
+    }
+
     .content-page {
         padding: 4rem 0 3rem;
     }

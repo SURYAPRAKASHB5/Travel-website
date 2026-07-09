@@ -362,10 +362,12 @@ img {
 
 .mega-dropdown {
     width: 900px;
+    max-width: 90vw;
 }
 
 .standard-dropdown {
     width: 260px;
+    max-width: 85vw;
     padding: 1.5rem;
     left: 0;
     transform: translateY(15px);
@@ -424,7 +426,6 @@ img {
     position: relative;
     height: 100vh;
     width: 100%;
-    max-width: 100vw;
     background-color: var(--color-dark);
     overflow: hidden;
 }

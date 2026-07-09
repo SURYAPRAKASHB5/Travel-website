@@ -101,10 +101,10 @@ html, body {
     top: 0;
     right: -100%;
     width: 100%;
-    max-width: 400px;
+    max-width: calc(100% - 60px);
     height: 100vh;
     background-color: var(--color-primary);
-    padding: 7rem 3rem 3rem 3rem;
+    padding: 7rem 1.5rem 3rem 1.5rem;
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
     transition: right var(--transition-duration) var(--transition-smooth);
     overflow-y: auto;
@@ -225,6 +225,154 @@ html, body {
 
     .quote-text {
         font-size: 1.35rem;
+    }
+}
+
+/* ==========================================================================
+   2.5 BREAKPOINT: 479px and below (Extra Small Mobile Devices)
+   ========================================================================== */
+@media (max-width: 479px) {
+    :root {
+        --site-padding: 1rem;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .nav-menu {
+        max-width: calc(100% - 40px) !important;
+        padding: 6rem 1rem 2rem 1rem !important;
+    }
+
+    .slider-arrow {
+        font-size: 1.25rem;
+        padding: 0.35rem;
+    }
+
+    .prev-arrow {
+        left: 0.25rem;
+    }
+
+    .next-arrow {
+        right: 0.25rem;
+    }
+
+    .slide-content {
+        margin-top: 30px;
+    }
+
+    .slide-title {
+        font-size: 1.75rem;
+    }
+
+    .slide-desc {
+        font-size: 0.9rem;
+    }
+
+    .slide-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .mega-dropdown,
+    .standard-dropdown {
+        max-width: calc(100vw - 1rem) !important;
+        padding: 1rem !important;
+    }
+
+    .finder-form {
+        gap: 1rem !important;
+    }
+
+    .card-grid {
+        gap: 1.5rem !important;
+    }
+
+    .destinations-grid {
+        grid-auto-rows: 200px !important;
+        gap: 1rem !important;
+    }
+
+    .newsletter-container {
+        gap: 1.5rem !important;
+    }
+
+    .catalog-card {
+        padding: 1.5rem !important;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .trip-title {
+        font-size: 1.1rem;
+    }
+
+    .trip-excerpt {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
+    .content-shell {
+        padding: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   2.6 BREAKPOINT: 480px-767px (Small Mobile & Phablet Devices)
+   ========================================================================== */
+@media (max-width: 767px) {
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    main {
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content-page {
+        padding: 4rem 0 3rem;
+    }
+
+    .content-shell {
+        padding: 1.5rem;
+    }
+
+    .featured-journeys {
+        padding: 4rem 0;
+    }
+
+    .why-us-section {
+        padding: 4rem 0;
+    }
+
+    .testimonials-section {
+        padding: 6rem 0;
+    }
+
+    .newsletter-section {
+        padding: 4rem 0;
+    }
+
+    .catalog-section {
+        padding: 4rem 0 3rem;
     }
 }
 

@@ -384,6 +384,8 @@ html, body {
         gap: 0.6rem;
         justify-content: flex-start;
         padding-top: 0;
+        /* Prevent brand text from getting pushed under the logo */
+        min-width: 0;
     }
 
     .brand-logo {
@@ -392,6 +394,7 @@ html, body {
         margin-bottom: 0;
     }
 
+    /* APEX branding sizing */
     .logo-main {
         font-size: 1.35rem;
         line-height: 1;
@@ -403,6 +406,7 @@ html, body {
         margin-top: 0;
         line-height: 1;
     }
+
 
     /* Ensure right side stays in one row */
     .nav-actions {
@@ -472,29 +476,37 @@ html, body {
     }
 
     /* Ensure logo text/icon remain visible on sticky */
-    .main-header.is-sticky .logo-main {
+    .main-header.is-sticky .logo-main,
+    .main-header.is-sticky .logo-sub {
         color: var(--color-primary) !important;
         opacity: 1 !important;
         visibility: visible !important;
+        white-space: nowrap;
     }
 
-    .main-header.is-sticky .logo-sub {
-        opacity: 1 !important;
-        visibility: visible !important;
-    }
-
+    /* Keep logo + brand in the same row on sticky */
     .main-header.is-sticky .logo {
+        flex-direction: row;
         align-items: center;
         justify-content: flex-start;
-        flex-direction: row;
         gap: 0.6rem;
         background-color: transparent !important;
+        min-width: 0;
+    }
+
+    .main-header.is-sticky .brand-logo,
+    .main-header.is-sticky .logo-main,
+    .main-header.is-sticky .logo-sub {
+        flex: 0 0 auto;
+        display: inline-block;
+        white-space: nowrap;
     }
 
     .main-header.is-sticky .nav-container,
     .main-header.is-sticky .nav-actions {
         background-color: transparent !important;
     }
+
 }
 
 /* ==========================================================================

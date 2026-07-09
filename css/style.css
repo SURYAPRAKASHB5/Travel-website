@@ -285,6 +285,18 @@ img {
     color: var(--color-primary);
 }
 
+/* Keep APEX brand visuals consistent on sticky state */
+.main-header.is-sticky .logo-sub {
+    color: var(--color-secondary);
+}
+
+.main-header.is-sticky .logo-sub,
+.main-header.is-sticky .logo-main {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 .nav-list {
     display: flex;
     list-style: none;

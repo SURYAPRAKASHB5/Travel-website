@@ -394,18 +394,18 @@ html, body {
         margin-bottom: 0;
     }
 
-    /* APEX branding sizing */
+    /* Mobile branding: show ONLY the logo (hide VOYAGES text) */
+    .logo-sub {
+        display: none;
+    }
+
+    /* Keep APEX styling without affecting desktop */
     .logo-main {
         font-size: 1.35rem;
         line-height: 1;
         letter-spacing: 0.12em;
     }
 
-    .logo-sub {
-        font-size: 0.6rem;
-        margin-top: 0;
-        line-height: 1;
-    }
 
 
     /* Ensure right side stays in one row */

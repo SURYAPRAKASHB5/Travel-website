@@ -352,6 +352,61 @@ html, body {
         display: none;
     }
 
+    /* ===== Mobile Header Fixes (logo + hamburger strip/overlap) ===== */
+    .main-header {
+        top: 0;
+        height: 70px;
+    }
+
+    .main-header.is-sticky {
+        height: 70px;
+    }
+
+    .nav-container {
+        align-items: center;
+    }
+
+    .logo {
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+    }
+
+    .logo-main {
+        font-size: 1.35rem;
+        line-height: 1;
+    }
+
+    .logo-sub {
+        font-size: 0.6rem;
+        margin-top: 0.15rem;
+    }
+
+    .mobile-menu-toggle {
+        width: 26px;
+        height: 20px;
+        align-self: center;
+    }
+
+    .mobile-menu-toggle .bar {
+        height: 2px;
+    }
+
+    /* Prevent sidebar text collision and remove the thin top gap */
+    .nav-menu {
+        top: 70px;
+        padding-top: 4.8rem;
+    }
+
+    .nav-menu.is-open {
+        right: 0;
+    }
+
     .content-page {
         padding: 4rem 0 3rem;
     }

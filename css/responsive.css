@@ -352,22 +352,37 @@ html, body {
         display: none;
     }
 
-    /* ===== Mobile Header Fixes (logo + hamburger strip/overlap) ===== */
+    /* ===== Mobile Header Fixes (match wilderness-style layout) ===== */
     .main-header {
         top: 0;
         height: 70px;
+        /* clean bar */
+        background-color: var(--color-light);
+        border-bottom: 1px solid var(--color-gray-200);
+        box-shadow: none;
     }
 
+    /* Keep sticky scroll state clean (no white strip) */
     .main-header.is-sticky {
         height: 70px;
+        background-color: var(--color-light) !important;
+        border-bottom: 1px solid var(--color-gray-200) !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
     }
 
     .nav-container {
         align-items: center;
+        gap: 0.75rem;
     }
 
+    /* Left: logo icon + brand in same row */
     .logo {
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.6rem;
+        justify-content: flex-start;
         padding-top: 0;
     }
 
@@ -380,11 +395,18 @@ html, body {
     .logo-main {
         font-size: 1.35rem;
         line-height: 1;
+        letter-spacing: 0.12em;
     }
 
     .logo-sub {
         font-size: 0.6rem;
-        margin-top: 0.15rem;
+        margin-top: 0;
+        line-height: 1;
+    }
+
+    /* Ensure right side stays in one row */
+    .nav-actions {
+        align-items: center;
     }
 
     .mobile-menu-toggle {
@@ -395,6 +417,11 @@ html, body {
 
     .mobile-menu-toggle .bar {
         height: 2px;
+    }
+
+    /* Remove Plan Trip on mobile to match reference spacing */
+    .btn-nav {
+        display: none !important;
     }
 
     /* Prevent sidebar text collision and remove the thin top gap */

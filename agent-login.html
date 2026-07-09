@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Login | Apex Voyages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="main-header is-sticky">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">APEX</span>
+                <span class="logo-sub">VOYAGES</span>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html#destinations" class="nav-link">Destinations</a></li>
+                    <li class="nav-item"><a href="index.html#featured" class="nav-link">Featured Journeys</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Traveler Blog</a></li>
+                    <li class="nav-item"><a href="agent-login.html" class="nav-link active">Agent Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="container">
+            <div class="content-shell">
+                <h1>Agent Login</h1>
+                <form class="catalog-form" id="agentLoginForm" novalidate>
+                    <div class="form-group">
+                        <label for="agentEmail">Email Address</label>
+                        <input type="email" id="agentEmail" required placeholder="agent@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="agentPassword">Password</label>
+                        <input type="password" id="agentPassword" required placeholder="Enter your password">
+                    </div>
+                    <div class="form-group">
+                        <label><input type="checkbox" id="agentRemember"> Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div id="agentLoginMessage" class="form-message" role="status" aria-live="polite"></div>
+                </form>
+
+                <div id="agentWelcomeState" class="login-success-state" hidden>
+                    <h2>Welcome Back, Travel Agent!</h2>
+                    <p>You have successfully logged in to the Travel Partner Portal.</p>
+                    <p class="login-email">Signed in as <strong id="agentWelcomeEmail">your account</strong></p>
+                    <button type="button" id="agentLogoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+                <a href="index.html" class="back-link">← Return to home</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel-Website | Premium Adventure Travel & Journeys</title>
+    <!-- Google Fonts for Luxury Editorial Feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS Modules -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- 1. Top Utility Bar -->
+    <div class="utility-bar">
+        <div class="container utility-container">
+            <div class="utility-left">
+                <span>Call an Expert: +91 8489853912</span>
+                <span class="separator">|</span>
+                <a href="mailto:suryaprakash45@gmail.com">suryaprakash45@gmail.com</a>
+                <span class="separator">|</span>
+                <a href="#catalog">Request a Catalog</a>
+            </div>
+            <div class="utility-right">
+                <a href="blog.html">Traveler Blog</a>
+                <a href="agent-login.html">Agent Login</a>
+                <button class="search-toggle-btn" aria-label="Open Search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Main Sticky Navbar -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="images/apex-voyages-logo.svg" alt="Apex Voyages logo" class="brand-logo">
+                <span class="logo-main">APEX</span>
+                <span class="logo-sub">VOYAGES</span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="#destinations" class="nav-link">Destinations</a>
+                        <div class="mega-dropdown">
+                            <div class="dropdown-grid">
+                                <div class="dropdown-col">
+                                    <h3>Americas</h3>
+                                    <a href="destinations/alaska-yukon.html">Alaska & Yukon</a>
+                                    <a href="destinations/patagonia-andes.html">Patagonia & Andes</a>
+                                    <a href="destinations/galapagos-islands.html">Galapagos Islands</a>
+                                    <a href="destinations/costa-rica-eco.html">Costa Rica Eco</a>
+                                </div>
+                                <div class="dropdown-col">
+                                    <h3>Europe</h3>
+                                    <a href="destinations/swiss-alps.html">The Swiss Alps</a>
+                                    <a href="destinations/mediterranean-coast.html">Mediterranean Coast</a>
+                                    <a href="destinations/iceland-expedition.html">Iceland Expedition</a>
+                                    <a href="destinations/scottish-highlands.html">Scottish Highlands</a>
+                                </div>
+                                <div class="dropdown-col">
+                                    <h3>Africa & Asia</h3>
+                                    <a href="destinations/serengeti-safari.html">Serengeti Safari</a>
+                                    <a href="destinations/moroccan-highlights.html">Moroccan Highlights</a>
+                                    <a href="destinations/himalayan-trekking.html">Himalayan Trekking</a>
+                                    <a href="destinations/kyoto-beyond.html">Kyoto & Beyond</a>
+                                </div>
+                                <div class="dropdown-col">
+                                    <h3>Polar Regions</h3>
+                                    <a href="destinations/antarctica-cruise.html">Antarctica Cruise</a>
+                                    <a href="destinations/arctic-icebreaker.html">Arctic Icebreaker</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#trip-styles" class="nav-link">Trip Styles</a>
+                        <div class="standard-dropdown">
+                            <a href="trip-styles/alpine-trekking.html">Alpine Trekking</a>
+                            <a href="trip-styles/cultural-expeditions.html">Cultural Expeditions</a>
+                            <a href="trip-styles/wildlife-safaris.html">Wildlife Safaris</a>
+                            <a href="trip-styles/luxury-small-ships.html">Luxury Small Ships</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#featured" class="nav-link">Featured Journeys</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Why Us</a></li>
+                    <li class="nav-item"><a href="#testimonials" class="nav-link">Stories</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#finder" class="btn btn-primary btn-nav">Plan Trip</a>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 3. Full-Width Hero Slider -->
+        <section class="hero-slider-section">
+            <div class="slider-wrapper" id="heroSlider">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <div class="slide-bg"
+                        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');">
+                    </div>
+                    <div class="slide-content container">
+                        <span class="slide-subtitle">Patagonia Wilderness</span>
+                        <h1 class="slide-title">To the Ends of the Earth</h1>
+                        <p class="slide-desc">Hike beneath dramatic granite spires, witness calving glaciers, and
+                            discover the raw majesty of South America's ultimate frontier.</p>
+                        <div class="hero-actions">
+                            <a href="#featured" class="btn btn-secondary">Explore Expeditions</a>
+                            <a href="#finder" class="btn btn-primary">Plan Trip</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <div class="slide-bg"
+                        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80');">
+                    </div>
+                    <div class="slide-content container">
+                        <span class="slide-subtitle">Swiss Alpine Passes</span>
+                        <h1 class="slide-title">The Grandeur of the Alps</h1>
+                        <p class="slide-desc">Traverse historic mountain pathways, walk through wildflower-filled
+                            meadows, and rest in classic European mountain hamlets.</p>
+                        <a href="#featured" class="btn btn-secondary">View Alpine Trips</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <div class="slide-bg"
+                        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1920&q=80');">
+                    </div>
+                    <div class="slide-content container">
+                        <span class="slide-subtitle">Serengeti Safari</span>
+                        <h1 class="slide-title">The Rhythm of the Wild</h1>
+                        <p class="slide-desc">Witness the world's most spectacular wildlife migrations from low-impact
+                            luxury camps situated deep inside the savanna.</p>
+                        <a href="#featured" class="btn btn-secondary">Discover Safaris</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <button class="slider-arrow prev-arrow" id="prevSlide" aria-label="Previous Slide">&#10094;</button>
+            <button class="slider-arrow next-arrow" id="nextSlide" aria-label="Next Slide">&#10095;</button>
+
+            <div class="slider-dots" id="sliderDots">
+                <!-- Dots generated dynamic via JS -->
+            </div>
+        </section>
+
+        <!-- 4. Search / Trip Finder Section -->
+        <section class="trip-finder-section" id="finder">
+            <div class="container">
+                <form class="finder-form" id="finderForm" novalidate>
+                    <div class="form-group">
+                        <label for="destinationSelect">Where to?</label>
+                        <select id="destinationSelect" required>
+                            <option value="" disabled selected>Select Destination</option>
+                            <option value="americas">Americas</option>
+                            <option value="europe">Europe</option>
+                            <option value="africa">Africa & Middle East</option>
+                            <option value="asia">Asia</option>
+                            <option value="polar">Polar Regions</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="styleSelect">Trip Style</label>
+                        <select id="styleSelect" required>
+                            <option value="" disabled selected>Select Style</option>
+                            <option value="hiking">Hiking & Trekking</option>
+                            <option value="cultural">Cultural Journey</option>
+                            <option value="wildlife">Wildlife Safari</option>
+                            <option value="cruise">Small Ship Cruise</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateSelect">When?</label>
+                        <select id="dateSelect" required>
+                            <option value="" disabled selected>Select Season</option>
+                            <option value="summer2026">Summer 2026</option>
+                            <option value="autumn2026">Autumn 2026</option>
+                            <option value="winter2026">Winter 2026 / 2027</option>
+                            <option value="spring2027">Spring 2027</option>
+                        </select>
+                    </div>
+                    <div class="form-action">
+                        <button type="submit" class="btn btn-primary btn-full">Find Your Trip</button>
+                    </div>
+                </form>
+                <div id="finderMessage" class="finder-message" role="status" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <!-- 5. Featured Journeys / Trip Cards -->
+        <section class="featured-journeys" id="featured">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tagline">Curated Adventures</span>
+                    <h2 class="section-title">Featured Journeys</h2>
+                    <p class="section-subtitle">Exquisite itineraries shaped by decades of exploratory field leadership.
+                    </p>
+                </div>
+
+                <div class="card-grid">
+                    <article class="trip-card scroll-reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Mountain Pass Paths" loading="lazy">
+                            <span class="card-badge">Top Rated</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="trip-meta">Peru • 10 Days</span>
+                            <h3 class="trip-title"><a href="#">Ultimate Inca Trail & Machu Picchu</a></h3>
+                            <p class="trip-excerpt">An architectural and high-altitude pilgrimage tracing classic pathways straight into the stone heart of Incan history.</p>
+                            <div class="card-footer">
+                                <span class="trip-price">From $4,295</span>
+                                <span class="trip-rating">★ 4.9 (124)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trip-card scroll-reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80" alt="African Wildlife Safari" loading="lazy">
+                            <span class="card-badge">Active</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="trip-meta">Tanzania • 12 Days</span>
+                            <h3 class="trip-title"><a href="#">The Great Serengeti Great Migration</a></h3>
+                            <p class="trip-excerpt">Follow luxury mobile canvas camps pitched along seasonal movement pathways of massive herds.</p>
+                            <div class="card-footer">
+                                <span class="trip-price">From $7,850</span>
+                                <span class="trip-rating">★ 5.0 (86)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trip-card scroll-reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80" alt="Coastal European village" loading="lazy">
+                            <span class="card-badge">New Journey</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="trip-meta">Italy & France • 14 Days</span>
+                            <h3 class="trip-title"><a href="#">Paths of the Mediterranean Rim</a></h3>
+                            <p class="trip-excerpt">Coastal walking loops high over blue waters tracking from historic cliffsides down to ancient port settlements.</p>
+                            <div class="card-footer">
+                                <span class="trip-price">From $6,120</span>
+                                <span class="trip-rating">★ 4.8 (19)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trip-card scroll-reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Glacier landscape" loading="lazy">
+                            <span class="card-badge">Expedition</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="trip-meta">Iceland • 8 Days</span>
+                            <h3 class="trip-title"><a href="#">Ice Cave & Volcano Discovery</a></h3>
+                            <p class="trip-excerpt">Explore lava fields, geothermal lagoons, and surreal glacier landscapes with expert local guides.</p>
+                            <div class="card-footer">
+                                <span class="trip-price">From $3,980</span>
+                                <span class="trip-rating">★ 4.7 (73)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trip-card scroll-reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Mountain village" loading="lazy">
+                            <span class="card-badge">Luxury</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="trip-meta">Swiss Alps • 9 Days</span>
+                            <h3 class="trip-title"><a href="#">Alpine Rail & Chalet Escape</a></h3>
+                            <p class="trip-excerpt">Ride scenic mountain trains, stay in boutique chalets, and savor the elegance of the Alps.</p>
+                            <div class="card-footer">
+                                <span class="trip-price">From $5,760</span>
+                                <span class="trip-rating">★ 4.9 (58)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trip-card scroll-reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=800&q=80" alt="Desert dunes" loading="lazy">
+                            <span class="card-badge">Signature</span>
+                        </div>
+                        <div class="card-body">
+                            <span class="trip-meta">Morocco • 11 Days</span>
+                            <h3 class="trip-title"><a href="#">Desert Nights & Atlas Passes</a></h3>
+                            <p class="trip-excerpt">Journey through kasbahs, oases, and golden dunes with private guides and immersive cultural stays.</p>
+                            <div class="card-footer">
+                                <span class="trip-price">From $4,880</span>
+                                <span class="trip-rating">★ 4.8 (64)</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Destinations Grid -->
+        <section class="destinations-section" id="destinations">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tagline">Worldwide Horizons</span>
+                    <h2 class="section-title">Explore by Region</h2>
+                </div>
+
+                <div class="destinations-grid">
+                    <a href="#" class="dest-tile tile-large scroll-reveal">
+                        <div class="tile-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1513553404607-988bf2703777?auto=format&fit=crop&w=1000&q=80');">
+                        </div>
+                        <div class="tile-content">
+                            <h3>Europe</h3>
+                            <span>24 Expeditions</span>
+                        </div>
+                    </a>
+                    <a href="#" class="dest-tile scroll-reveal">
+                        <div class="tile-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=700&q=80');">
+                        </div>
+                        <div class="tile-content">
+                            <h3>Latin America</h3>
+                            <span>31 Expeditions</span>
+                        </div>
+                    </a>
+                    <a href="#" class="dest-tile scroll-reveal">
+                        <div class="tile-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=700&q=80');">
+                        </div>
+                        <div class="tile-content">
+                            <h3>North America</h3>
+                            <span>15 Expeditions</span>
+                        </div>
+                    </a>
+                    <a href="#" class="dest-tile tile-wide scroll-reveal">
+                        <div class="tile-bg"
+                            style="background-image: url('https://images.unsplash.com/photo-1489440543286-a69330151c0b?auto=format&fit=crop&w=1000&q=80');">
+                        </div>
+                        <div class="tile-content">
+                            <h3>Asia & Pacific</h3>
+                            <span>19 Expeditions</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Why Travel With Us / Feature Icons -->
+        <section class="why-us-section" id="about">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tagline">The Distinctive Standard</span>
+                    <h2 class="section-title">Why Travel With Us</h2>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h3>40+ Years of Experience</h3>
+                        <p>Crafting industry-defining field excursions since our early exploratory mappings across high
+                            montane loops.</p>
+                    </div>
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3>Elite Local Leadership</h3>
+                        <p>Unmatched regional guides possessing deep cultural lineage, geological backgrounds, and
+                            absolute safety accolades.</p>
+                    </div>
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                        </div>
+                        <h3>Low Impact, High Comfort</h3>
+                        <p>Deep foundational commitment to local economies and carbon reductions matching luxury
+                            property amenities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Testimonials / Traveler Stories -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tagline">Voices from the Trail</span>
+                    <h2 class="section-title">Traveler Journeys</h2>
+                </div>
+
+                <div class="testimonials-container scroll-reveal">
+                    <blockquote>
+                        <p class="quote-text">"The depth of expertise displayed by our regional guides turned an
+                            extraordinary mountain walking circuit into a profoundly immersive cultural education we
+                            couldn’t have replicated."</p>
+                        <cite class="quote-author">
+                            <span class="author-name">Eleanor Vance</span>
+                            <span class="author-trip">Patagonia Circuit Expedition</span>
+                        </cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Newsletter / CTA Section -->
+        <section class="newsletter-section">
+            <div class="container newsletter-container scroll-reveal">
+                <div class="newsletter-info">
+                    <h2>Inspiring Journeys Directly to Your Inbox</h2>
+                    <p>Join our conscious network of global travelers for quarterly updates, regional dispatches, and
+                        exclusive early trip releases.</p>
+                </div>
+                <div class="newsletter-form-wrapper">
+                    <form class="newsletter-form" id="newsletterForm" novalidate>
+                        <div class="input-field-group">
+                            <input type="email" id="newsletterEmail" placeholder="Your Email Address"
+                                aria-label="Email Address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <span class="error-msg" id="emailError">Please enter a valid email.</span>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-section" id="catalog">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tagline">Request a Catalog</span>
+                    <h2 class="section-title">Receive our curated travel catalog</h2>
+                    <p class="section-subtitle">Share your details and our team will send inspiration straight to your inbox.</p>
+                </div>
+                <div class="catalog-card">
+                    <form class="catalog-form" id="catalogForm" novalidate>
+                        <div class="form-group">
+                            <label for="catalogName">Full Name</label>
+                            <input type="text" id="catalogName" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="catalogEmail">Email Address</label>
+                            <input type="email" id="catalogEmail" required placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="catalogPhone">Phone Number</label>
+                            <input type="tel" id="catalogPhone" required placeholder="+91 8489853912">
+                        </div>
+                        <div class="form-group">
+                            <label for="catalogNotes">Travel Interests</label>
+                            <textarea id="catalogNotes" rows="4" placeholder="Tell us about the kind of journey you dream about"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                        <div id="catalogMessage" class="form-message" role="status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 10. Multi-Column Footer -->
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-brand-col">
+                <a href="#" class="logo logo-light">
+                    <img src="images/apex-voyages-logo.svg" alt="Apex Voyages logo" class="brand-logo brand-logo-light">
+                    <span class="logo-main">APEX</span>
+                    <span class="logo-sub">VOYAGES</span>
+                </a>
+                <p>Curating award-winning luxury wilderness excursions across delicate globally protected ecosystems for
+                    forty years.</p>
+            </div>
+            <div class="footer-links-col">
+                <h3>Expeditions</h3>
+                <ul>
+                    <li><a href="#">All Trips</a></li>
+                    <li><a href="#">Active Walking</a></li>
+                    <li><a href="#">Private Custom</a></li>
+                    <li><a href="#">Family Adventures</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Get a Catalog</a></li>
+                    <li><a href="#">Travel Advisory Updates</a></li>
+                    <li><a href="#">Flight Coordination</a></li>
+                    <li><a href="#">Expert Safety Teams</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h3>Connect With Us</h3>
+                <address class="footer-address">
+                    100 Horizon Ridge Parkway<br>
+                    Suite 400, Luxury Trails, CA<br>
+                    <a href="mailto:suryaprakash45@gmail.com">suryaprakash45@gmail.com</a>
+                    <a href="tel:+918489853912">+91 8489853912</a>
+                </address>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Apex Voyages Inc. All rights reserved.</p>
+            <div class="footer-legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Overlay Component -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+        <button class="search-close-btn" aria-label="Close Search">&times;</button>
+        <div class="search-overlay-content">
+            <form class="overlay-search-form">
+                <input type="search" placeholder="Search destinations, styles, or keywords..."
+                    aria-label="Global Search">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scroll Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll to top">&#10224;</button>
+
+    <!-- Core Script Modules -->
+    <script src="js/slider.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

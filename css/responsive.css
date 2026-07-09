@@ -1,0 +1,458 @@
+/* ==========================================================================
+   1. BASE RESPONSIVE GRID & TYPOGRAPHY FOUNDATIONS (Mobile-First)
+   ========================================================================== */
+:root {
+    /* Responsive Spacing & Layout Rhythm Fluid Variables */
+    --site-padding: 1.25rem;
+}
+
+/* Global Container Override for Fluid Adaptation */
+.container {
+    padding-left: var(--site-padding);
+    padding-right: var(--site-padding);
+}
+
+/* Default Mobile States for Complex Structural Layouts */
+.finder-form {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+}
+
+.card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+}
+
+.destinations-grid {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 240px !important;
+    gap: 1.25rem;
+}
+
+.tile-large,
+.tile-wide {
+    grid-row: auto !important;
+    grid-column: auto !important;
+}
+
+.features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem;
+}
+
+.newsletter-container {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+    text-align: center;
+}
+
+.footer-top {
+    grid-template-columns: 1fr !important;
+    gap: 3rem;
+}
+
+.footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+/* Mobile Navigation Setup */
+.mobile-menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1010;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.mobile-menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-light);
+    transition: all var(--transition-duration) var(--transition-smooth);
+}
+
+.main-header.is-sticky .mobile-menu-toggle .bar {
+    background-color: var(--color-dark);
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--color-primary);
+    padding: 7rem 3rem 3rem 3rem;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+    transition: right var(--transition-duration) var(--transition-smooth);
+    overflow-y: auto;
+    z-index: 1005;
+}
+
+.nav-menu.is-open {
+    right: 0;
+}
+
+.nav-list {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--color-light) !important;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-nav {
+    display: none !important;
+    /* Managed within mobile menu action or header layouts */
+}
+
+/* Disable desktop hover dropdowns on mobile */
+.mega-dropdown,
+.standard-dropdown {
+    position: static !important;
+    width: 100% !important;
+    padding: 1rem 0 0 1rem !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    display: none;
+    /* Toggled via mobile menu sub-interaction script */
+    transform: none !important;
+}
+
+.dropdown-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+}
+
+.dropdown-col h3 {
+    color: var(--color-secondary) !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.dropdown-col a,
+.standard-dropdown a {
+    color: rgba(252, 251, 250, 0.7) !important;
+    padding: 0.3rem 0 !important;
+}
+
+.nav-item.has-dropdown.is-active .mega-dropdown,
+.nav-item.has-dropdown.is-active .standard-dropdown {
+    display: block !important;
+}
+
+/* Hamburger Animating States */
+.mobile-menu-toggle.is-open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--color-light) !important;
+}
+
+.mobile-menu-toggle.is-open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.is-open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--color-light) !important;
+}
+
+/* ==========================================================================
+   2. BREAKPOINT: 320px (Compact Mobile Screens)
+   ========================================================================== */
+@media (min-width: 320px) {
+    .slide-title {
+        font-size: 2.25rem;
+    }
+
+    .slide-desc {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .quote-text {
+        font-size: 1.35rem;
+    }
+}
+
+/* ==========================================================================
+   3. BREAKPOINT: 480px (Premium Smart Mobile Screen Layouts)
+   ========================================================================== */
+@media (min-width: 480px) {
+    :root {
+        --site-padding: 1.75rem;
+    }
+
+    .slide-title {
+        font-size: 2.75rem;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+    }
+
+    .utility-left {
+        display: flex;
+    }
+
+    .utility-bar .separator {
+        display: inline;
+    }
+}
+
+/* ==========================================================================
+   4. BREAKPOINT: 768px (Tablets & Medium Displays)
+   ========================================================================== */
+@media (min-width: 768px) {
+    :root {
+        --site-padding: 2rem;
+    }
+
+    .slide-title {
+        font-size: 3.5rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    /* Finder Horizontal Segment Alignment Grid Setup */
+    .finder-form {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .form-action {
+        grid-column: span 2;
+    }
+
+    /* Cards Restructuring */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Destination Grid Layout Adaptation */
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .tile-large {
+        grid-row: span 2 !important;
+    }
+
+    /* Footer Expansion Layer */
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+/* ==========================================================================
+   5. BREAKPOINT: 1024px (Laptops & Desktop Foundations)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    :root {
+        --site-padding: 2.5rem;
+    }
+
+    .utility-bar {
+        height: 44px;
+    }
+
+    /* Restore Core Desktop Navbar Structural Models */
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+
+    .nav-menu {
+        position: static !important;
+        width: auto !important;
+        max-width: none !important;
+        height: auto !important;
+        background: none !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        overflow-y: visible !important;
+    }
+
+    .nav-list {
+        flex-direction: row !important;
+        gap: 2rem !important;
+    }
+
+    .nav-link {
+        color: var(--color-light) !important;
+        padding: 2rem 0 !important;
+        font-size: 0.85rem !important;
+        border-bottom: none !important;
+    }
+
+    .main-header.is-sticky .nav-link {
+        color: var(--color-dark) !important;
+    }
+
+    .main-header.is-sticky .nav-link:hover {
+        color: var(--color-secondary) !important;
+    }
+
+    .btn-nav {
+        display: inline-flex !important;
+    }
+
+    /* Reset Dropdowns Engine for Desktop Interaction Layers */
+    .mega-dropdown,
+    .standard-dropdown {
+        position: absolute !important;
+        display: block !important;
+        /* Visible toggle states are now controlled by opacity/visibility engine */
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    .dropdown-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 2rem !important;
+    }
+
+    .dropdown-col h3 {
+        color: var(--color-primary) !important;
+        font-size: 1.15rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .dropdown-col a,
+    .standard-dropdown a {
+        color: var(--color-gray-500) !important;
+    }
+
+    /* Re-enable Desktop Dropdown Engine Interactivity */
+    .nav-item:hover .mega-dropdown,
+    .nav-item:hover .standard-dropdown {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+    }
+
+    /* Core Layout Structural Restoration */
+    .finder-form {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .form-action {
+        grid-column: auto;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .destinations-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .tile-wide {
+        grid-column: span 2 !important;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2.5rem !important;
+    }
+
+    .newsletter-container {
+        grid-template-columns: 1fr 1fr !important;
+        text-align: left;
+    }
+
+    .footer-top {
+        grid-template-columns: 1.5fr repeat(3, 1fr) !important;
+        gap: 2.5rem !important;
+    }
+
+    /* Content Typography Scaling Upgrades */
+    .slide-title {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .quote-text {
+        font-size: 1.65rem;
+    }
+}
+
+/* ==========================================================================
+   6. BREAKPOINT: 1200px (Standard Editorial Desktop Dimensions)
+   ========================================================================== */
+@media (min-width: 1200px) {
+    .nav-list {
+        gap: 2.5rem !important;
+    }
+
+    .nav-link {
+        font-size: 0.9rem !important;
+    }
+
+    .slide-title {
+        font-size: 4.5rem;
+    }
+
+    .section-title {
+        font-size: 2.75rem;
+    }
+
+    .quote-text {
+        font-size: 1.85rem;
+    }
+
+    .features-grid {
+        gap: 3.5rem !important;
+    }
+
+    .footer-top {
+        gap: 4rem !important;
+    }
+}
+
+/* ==========================================================================
+   7. BREAKPOINT: 1440px (Ultra-Wide Retinal Displays & Monitors)
+   ========================================================================== */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1360px;
+        /* Expands spatial structure slightly for crisp layouts */
+    }
+
+    .slide-content {
+        max-width: 900px;
+    }
+
+    .slide-title {
+        font-size: 5rem;
+    }
+}

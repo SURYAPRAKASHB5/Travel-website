@@ -52,6 +52,7 @@ body {
     color: var(--color-dark);
     line-height: 1.65;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 .container {
@@ -422,7 +423,8 @@ img {
 .hero-slider-section {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
     background-color: var(--color-dark);
     overflow: hidden;
 }

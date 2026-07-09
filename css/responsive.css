@@ -1,6 +1,19 @@
 /* ==========================================================================
    1. BASE RESPONSIVE GRID & TYPOGRAPHY FOUNDATIONS (Mobile-First)
    ========================================================================== */
+/* ==========================================================================
+   0. CRITICAL MOBILE FIXES
+   ========================================================================== */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 :root {
     /* Responsive Spacing & Layout Rhythm Fluid Variables */
     --site-padding: 1.25rem;
@@ -171,6 +184,27 @@
 .mobile-menu-toggle.is-open .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
     background-color: var(--color-light) !important;
+}
+
+/* Mobile Viewport Overflow Prevention */
+@media (max-width: 1023px) {
+    .mega-dropdown,
+    .standard-dropdown {
+        max-width: calc(100vw - 2rem) !important;
+    }
+    
+    .slider-arrow {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    .prev-arrow {
+        left: 0.5rem;
+    }
+    
+    .next-arrow {
+        right: 0.5rem;
+    }
 }
 
 /* ==========================================================================

@@ -139,12 +139,37 @@ html, body {
     gap: 1.5rem;
 }
 
+
+/* Mobile drawer menu item layout (shared across all top-level categories) */
 .nav-link {
     color: var(--color-light) !important;
-    padding: 0.75rem 0;
+    /* Keep text vertically centered with comfortable spacing */
+    padding: 0.95rem 0;
     font-size: 1.1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+
+    /* Divider placed via pseudo-element so it never crosses text */
+    position: relative;
+    border-bottom: none;
 }
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    /* Make divider clearly visible again */
+    background: rgba(194, 155, 104, 0.85);
+    opacity: 1;
+}
+
+
+
+
 
 .btn-nav {
     display: none !important;
@@ -637,21 +662,8 @@ html, body {
    5. BREAKPOINT: 1024px (Laptops & Desktop Foundations)
    ========================================================================== */
 @media (min-width: 1024px) {
-    /* Desktop header layout sanity: keep nav links from squeezing into nav-actions */
-    .nav-container {
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .nav-menu {
-        flex: 1;
-        min-width: 0;
-    }
-
-    .nav-actions {
-        flex: 0 0 auto;
-    }
-
+    /* Match mobile-correct header/menu behavior on desktop by avoiding the desktop-only nav model overrides.
+       Keep only typography + general layout scaling. */
 
     :root {
         --site-padding: 2.5rem;
@@ -661,82 +673,7 @@ html, body {
         height: 44px;
     }
 
-    /* Restore Core Desktop Navbar Structural Models */
-    .mobile-menu-toggle {
-        display: none !important;
-    }
-
-    .nav-menu {
-        position: static !important;
-        width: auto !important;
-        max-width: none !important;
-        height: auto !important;
-        background: none !important;
-        padding: 0 !important;
-        box-shadow: none !important;
-        overflow-y: visible !important;
-    }
-
-    .nav-list {
-        flex-direction: row !important;
-        gap: 2rem !important;
-    }
-
-    .nav-link {
-        color: var(--color-light) !important;
-        padding: 2rem 0 !important;
-        font-size: 0.85rem !important;
-        border-bottom: none !important;
-    }
-
-    .main-header.is-sticky .nav-link {
-        color: var(--color-dark) !important;
-    }
-
-    .main-header.is-sticky .nav-link:hover {
-        color: var(--color-secondary) !important;
-    }
-
-    .btn-nav {
-        display: inline-flex !important;
-    }
-
-    /* Reset Dropdowns Engine for Desktop Interaction Layers */
-    .mega-dropdown,
-    .standard-dropdown {
-        position: absolute !important;
-        display: block !important;
-        /* Visible toggle states are now controlled by opacity/visibility engine */
-        opacity: 0 !important;
-        visibility: hidden !important;
-        pointer-events: none !important;
-    }
-
-    .dropdown-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 2rem !important;
-    }
-
-    .dropdown-col h3 {
-        color: var(--color-primary) !important;
-        font-size: 1.15rem !important;
-        margin-bottom: 1rem !important;
-    }
-
-    .dropdown-col a,
-    .standard-dropdown a {
-        color: var(--color-gray-500) !important;
-    }
-
-    /* Re-enable Desktop Dropdown Engine Interactivity */
-    .nav-item:hover .mega-dropdown,
-    .nav-item:hover .standard-dropdown {
-        opacity: 1 !important;
-        visibility: visible !important;
-        pointer-events: auto !important;
-    }
-
-    /* Core Layout Structural Restoration */
+    /* Core Layout Structural Restoration (content grids) */
     .finder-form {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     }

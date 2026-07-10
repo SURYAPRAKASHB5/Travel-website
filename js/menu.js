@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.getElementById('navMenu');
   if (!toggle || !navMenu) return;
 
+  // If any other code ever adds click handlers to links in the header,
+  // this small guard prevents the drawer logic from blocking navigation.
+  const isPlanTripLink = (el) => {
+    if (!(el instanceof Element)) return false;
+    return !!el.closest('[data-apex-plan-trip], .btn-nav, a.btn-nav, a[href="#"], a');
+  };
+
+
   const dropdownParents = Array.from(navMenu.querySelectorAll('.nav-item.has-dropdown'));
 
   const isOpen = () => navMenu.classList.contains('is-open');
@@ -86,9 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const link = target.closest('.nav-link');
     if (!link) return;
 
+    // Never block simple navigation actions like "Plan Trip".
+    if (isPlanTripLink(link) || isPlanTripLink(target)) return;
+
     const parent = link.closest('.nav-item.has-dropdown');
     if (!parent) closeMenu();
   });
+
 });
 
 

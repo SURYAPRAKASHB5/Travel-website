@@ -70,9 +70,8 @@ html, body {
     text-align: center;
 }
 
-/* Mobile Navigation (side drawer) */
+/* Mobile Navigation (right-side compact drawer) */
 .mobile-menu-toggle {
-
     display: flex !important;
     flex-direction: column;
     justify-content: space-between;
@@ -85,6 +84,7 @@ html, body {
     padding: 0;
     flex-shrink: 0;
 }
+
 
 .mobile-menu-toggle .bar {
     width: 100%;
@@ -129,11 +129,9 @@ html, body {
 @media (max-width: 1023px) {
     body.nav-menu-open {
         overflow: hidden;
-        /* Subtle left shift so the background peeks */
-        transform: translateX(calc(-1 * min(20vw, 72px)));
-        transition: transform var(--transition-duration) var(--transition-smooth);
     }
 }
+
 
 
 .nav-list {
@@ -464,15 +462,17 @@ html, body {
     }
 
 
-    /* Prevent sidebar text collision and remove the thin top gap */
+    /* Keep compact right drawer aligned to the 70px header, no extra padding-top */
     .nav-menu {
         top: 70px;
-        padding-top: 4.8rem;
+        padding-top: 2rem;
+        right: 0;
     }
 
     .nav-menu.is-open {
         right: 0;
     }
+
 
     .content-page {
         padding: 4rem 0 3rem;
@@ -484,6 +484,7 @@ html, body {
 
     .featured-journeys {
         padding: 4rem 0;
+        scroll-margin-top: 70px;
     }
 
     .why-us-section {
@@ -636,10 +637,21 @@ html, body {
    5. BREAKPOINT: 1024px (Laptops & Desktop Foundations)
    ========================================================================== */
 @media (min-width: 1024px) {
-    /* Minor desktop refinements for consistent header alignment */
+    /* Desktop header layout sanity: keep nav links from squeezing into nav-actions */
     .nav-container {
         align-items: center;
+        gap: 1.5rem;
     }
+
+    .nav-menu {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .nav-actions {
+        flex: 0 0 auto;
+    }
+
 
     :root {
         --site-padding: 2.5rem;

@@ -77,6 +77,11 @@ img {
 /* ==========================================================================
    2. REUSABLE COMPONENTS & TYPOGRAPHY DEFINITIONS
    ========================================================================== */
+/* Prevent anchor-scroll from hiding content under the sticky header */
+[id] {
+    scroll-margin-top: 90px;
+}
+
 .section-header {
     text-align: center;
     max-width: 700px;
@@ -600,7 +605,8 @@ img {
     padding: 2.5rem 0;
     position: relative;
     z-index: 20;
-    margin-top: -40px;
+    /* Restore previous clean spacing: avoid overlapping header/next section */
+    margin-top: 0;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -796,6 +802,8 @@ img {
 .featured-journeys {
     padding: 8rem 0;
     background-color: var(--color-light);
+    /* Ensure anchor landing doesn't hide the heading under the sticky header */
+    scroll-margin-top: 90px;
 }
 
 .card-grid {
@@ -1366,3 +1374,6 @@ img {
     color: var(--color-dark);
     transform: translateY(-3px);
 }
+
+
+

@@ -70,8 +70,9 @@ html, body {
     text-align: center;
 }
 
-/* Mobile Navigation Setup */
+/* Mobile Navigation (side drawer) */
 .mobile-menu-toggle {
+
     display: flex !important;
     flex-direction: column;
     justify-content: space-between;
@@ -98,18 +99,19 @@ html, body {
 
 .nav-menu {
     position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    max-width: calc(100% - 60px);
-    height: 100vh;
+    top: 70px;
+    right: 0;
+    width: min(360px, calc(100vw - 48px));
+    height: calc(100vh - 70px);
     background-color: var(--color-primary);
-    padding: 7rem 1.5rem 3rem 1.5rem;
+    padding: 2rem 1.25rem 2rem 1.25rem;
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
-    transition: right var(--transition-duration) var(--transition-smooth);
+    transition: transform var(--transition-duration) var(--transition-smooth);
+    transform: translateX(110%);
     overflow-y: auto;
     z-index: 1005;
 }
+
 
 .nav-menu.is-open {
     right: 0;

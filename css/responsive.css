@@ -423,10 +423,18 @@ html, body {
         height: 2px;
     }
 
-    /* Remove Plan Trip on mobile to match reference spacing */
+    /* Plan Trip button is hidden on mobile to keep header compact */
     .btn-nav {
         display: none !important;
     }
+
+    /* Ensure the right-side actions align consistently on all pages */
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
 
     /* Prevent sidebar text collision and remove the thin top gap */
     .nav-menu {
@@ -483,6 +491,17 @@ html, body {
         visibility: visible !important;
         white-space: nowrap;
     }
+
+    /* Keep nav container aligned with the 70px sticky header */
+    .main-header.is-sticky .nav-container {
+        height: 70px;
+    }
+
+    /* Ensure hamburger icon stays visible on sticky pages */
+    .main-header.is-sticky .mobile-menu-toggle .bar {
+        background-color: var(--color-dark) !important;
+    }
+
 
     /* Keep logo + brand in the same row on sticky */
     .main-header.is-sticky .logo {
@@ -589,6 +608,11 @@ html, body {
    5. BREAKPOINT: 1024px (Laptops & Desktop Foundations)
    ========================================================================== */
 @media (min-width: 1024px) {
+    /* Minor desktop refinements for consistent header alignment */
+    .nav-container {
+        align-items: center;
+    }
+
     :root {
         --site-padding: 2.5rem;
     }

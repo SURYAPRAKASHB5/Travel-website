@@ -12,13 +12,17 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header class="main-header is-sticky">
+    <div data-include="partials/header.html"></div>
+
+
+    <main class="content-page">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <span class="logo-main">APEX</span>
                 <span class="logo-sub">VOYAGES</span>
             </a>
-            <nav class="nav-menu">
+
+            <nav class="nav-menu" id="navMenu">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html#destinations" class="nav-link">Destinations</a></li>
                     <li class="nav-item"><a href="index.html#featured" class="nav-link">Featured Journeys</a></li>
@@ -26,8 +30,16 @@
                     <li class="nav-item"><a href="agent-login.html" class="nav-link active">Agent Login</a></li>
                 </ul>
             </nav>
+
+            <div class="nav-actions">
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
-    </header>
+</div>
 
     <main class="content-page">
         <div class="container">
@@ -60,6 +72,8 @@
         </div>
     </main>
 
+    <script src="js/include-partials.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>

@@ -101,21 +101,40 @@ html, body {
     position: fixed;
     top: 70px;
     right: 0;
-    width: min(360px, calc(100vw - 48px));
+
+    /* Side drawer width: max ~80% of viewport */
+    width: min(calc(80vw - 48px), 360px);
+    max-width: 360px;
+
     height: calc(100vh - 70px);
     background-color: var(--color-primary);
     padding: 2rem 1.25rem 2rem 1.25rem;
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
     transition: transform var(--transition-duration) var(--transition-smooth);
-    transform: translateX(110%);
+
+    /* Slide from the right without full-screen overlay width */
+    transform: translateX(100%);
     overflow-y: auto;
     z-index: 1005;
-}
 
+    /* Avoid accidental layout expansion */
+    overflow-x: hidden;
+}
 
 .nav-menu.is-open {
-    right: 0;
+    transform: translateX(0);
 }
+
+/* Keep a small part of the page visible behind the drawer */
+@media (max-width: 1023px) {
+    body.nav-menu-open {
+        overflow: hidden;
+        /* Subtle left shift so the background peeks */
+        transform: translateX(calc(-1 * min(20vw, 72px)));
+        transition: transform var(--transition-duration) var(--transition-smooth);
+    }
+}
+
 
 .nav-list {
     flex-direction: column;
@@ -339,6 +358,13 @@ html, body {
         width: 100%;
         max-width: 100%;
     }
+
+    /* If drawer-open class is used elsewhere, keep the desktop header unaffected */
+    body.nav-menu-open {
+        overflow: hidden;
+        transform: none;
+    }
+
 
     main {
         overflow-x: hidden;
